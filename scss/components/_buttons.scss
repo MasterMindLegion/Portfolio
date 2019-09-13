@@ -1,0 +1,18 @@
+.btn--default {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    line-height: 4.75em;
+    text-transform: uppercase;
+    outline: 0;
+    padding: 0 3.75em;
+    background-color: $primary;
+    a {
+      color: $terciary;
+    }
+}
+.btn_header {
+  border-radius: 0.6rem;
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 2rem;
+  h1 {
+    padding: 1rem 0 1.5rem 0 ;
+    margin-top: -1.5rem;
+  }
+  p {
+    padding: 0.8rem;
+    line-height: 1.7;
+    text-align: left;
+  }
+  button {
+    margin: 2rem 0 0 0;
+  }
+}
+.quote {
+  padding: 2rem;
+  border-left: 2px solid $primary;
+  margin-left: 2rem;
+}

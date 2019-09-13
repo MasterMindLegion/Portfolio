@@ -1,0 +1,12 @@
+// Link
+%a {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  color: $link;
+  padding: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:hover {
+    color: black;
+  }
+}
