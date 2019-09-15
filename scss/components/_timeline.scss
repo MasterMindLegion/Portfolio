@@ -1,0 +1,113 @@
+.timeline {
+  background-color: $secondary;
+  color: white;
+
+  ul {
+    padding: 50px 0;
+// Creation of line
+    li {
+      position: relative;
+      width: 6px;
+      margin: 0 auto;
+      padding-top: 50px;
+      background: white;
+    }
+  }
+}
+// Create Boxes
+#Timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  background: $primary;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Right Side
+#Timeline ul li:nth-child(odd) div {
+  left: 40px;
+  translate:(200px, 0);
+  //Right Side Arrows 
+  &::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent $primary transparent transparent;
+  }
+}
+//Left Side
+#Timeline ul li:nth-child(even) div {
+  left: -434px;
+  translate:(-200px, 0);
+
+  &::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent $primary ;
+  }
+}
+// Dots
+#Timeline ul li {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    background: inherit;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    transition: background 0.5s ease-in-out;
+  }
+}
+#Timeline div {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+}
+//Show Boxes
+#Timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+// Responsive
+@media(max-width: 900px) {
+  #Timeline ul li div {
+    width: 250px;
+  }
+
+  #Timeline ul li:nth-child(even) div {
+    left: -284px;
+  }
+}
+
+@media(max-width: 600px) {
+  #Timeline ul li {
+    margin-left: 20px;
+  }
+
+  #Timeline ul li div {
+    width: calc(100vw - 90px);
+  }
+
+  #Timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+
+  #Timeline ul li:nth-child(even) div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent $primary transparent transparent;
+  }
+}
+
