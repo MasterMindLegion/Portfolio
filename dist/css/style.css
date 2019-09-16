@@ -108,7 +108,7 @@ header {
   margin: 2rem;
   background-color: white;
   color: black;
-  box-shadow: rgba(138, 0, 137, 0.4) 3px 2px 3px 2px; }
+  box-shadow: rgba(138, 0, 137, 0.4) 1px 1px 1px 2px; }
   .service:hover {
     border: 1px solid white; }
   .service i {
@@ -231,4 +231,10 @@ nav ul a {
     border-color: transparent #8a0089 transparent transparent; } }
 
 body {
-  font-family: "sans-serif"; }
+  font-family: "Open Sans, Proza Libre"; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Proza Libre"; }
+
+a, p {
+  font-family: "Open Sans"; }

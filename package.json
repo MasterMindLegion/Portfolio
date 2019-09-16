@@ -4,12 +4,18 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "scss": "node-sass -w scss/ -o dist/css/ --recursive"
+    "scss": "node-sass -w src/scss/ -o dist/css/ --recursive"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^4.0.2",
     "normalize.css": "^8.0.1",
     "npm": "^6.11.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1"
   }
 }

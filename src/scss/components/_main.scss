@@ -15,6 +15,7 @@
     text-align: left;
     padding: 1rem 0 2rem 0;
   }
+  
   .services_p {
     padding: 1rem;
   }
@@ -32,7 +33,7 @@
   margin: 2rem;
   background-color: white;
   color: black;
-  box-shadow: $primaryDark 3px 2px 3px 2px;
+  box-shadow: $primaryDark 1px 1px 1px 2px;
 
   &:hover {
     border: 1px solid white;
