@@ -8,6 +8,10 @@ const del = require('del');
 const htmlmin = require('gulp-htmlmin');
 // browserSync server
 const browsersync_server = require('browser-sync').create();
+//SCSS
+const sass = require('gulp-sass');
+const sourcemaps = require("gulp-sourcemaps");
+
 
 
 // 2.======== declare functions
@@ -56,6 +60,7 @@ function publishImages(done) {
 // watch files
 function watchFiles(done) {
   gulp.watch("src/**/*.html", gulp.series(publishHtml, reload));
+  gulp.watch("src/scss/**/*.scss", gulp.series(compileScss, reload));
 }
 
 // browserSync server
@@ -74,12 +79,41 @@ function reload(done) {
   done();
 }
 
+// compile SCSS files
+function compileScss(done, for_production = false) {
+  let pipeline = gulp.src('src/scss/**/*.scss')
+      // .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+
+  if (for_production) {
+      pipeline.pipe(autoprefixer({
+          overrideBrowserslist: [
+              "last 2 version",
+              "> 2%"
+          ],
+          cascade: false
+      }))
+      .pipe(csso());
+  }
+
+  return pipeline.pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/css'));
+}
+
+function compileScssProduction(done) {
+  return compileScss(done, true);
+}
+
+function compileScssDevelopment(done) {
+  return compileScss(done, false);
+}
+
 // 3.======== define complex tasks
 
 // 4.========== export tasks
 exports.publish = gulp.series(cleanAssets, publishHtml, publishFonts, publishImages);
 exports.build   = gulp.series(cleanAssets, publishHtmlProduction,  publishFonts, publishImages);
-exports.watch   = gulp.series(cleanAssets, publishHtml, serve, watchFiles);
+exports.watch = gulp.series(cleanAssets, publishHtml, compileScss, serve, watchFiles);
 
 
 

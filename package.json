@@ -16,6 +16,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
