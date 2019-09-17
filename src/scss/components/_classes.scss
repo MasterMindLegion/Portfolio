@@ -1,19 +1,25 @@
 // ========= Text Classes
+
 .lead {
   font-weight: 300;
   line-height: 1;
   color: #333;
 }
+
 .quote {
   font-style: italic;
 }
+
 .author {
   font-size: 0.9rem;
   font-style: italic;
 }
+
+// Headings
 .bg-heading {
   font-size: 2.2rem;
 }
+
 //========= Layout
 .wrap--default {
   display: flex;

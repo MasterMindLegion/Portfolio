@@ -38,6 +38,29 @@ function createStructure(done) {
  
     return done();
 }
+// Create Folders in dist
+// Special thanks for Ricardos function. 
+const createDistStructure = (done) => {
+    const folders = [
+        'dist',        
+        'dist/fonts',
+        'dist/img'
+        
+    ];
+    
+ 
+    folders.forEach(dir => {
+        if(!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+            console.log('folder created:', dir);    
+        }   
+    });
+ 
+   
+ 
+    return done();
+
+}
  
 // deletes all assets (HTML, fonts, images) in dist
 function cleanAssets(done) {
@@ -83,7 +106,7 @@ function publishImages(done) {
 // compile SCSS files
 function compileScss(done, for_production = false) {
     let pipeline = gulp.src('src/scss/**/*.scss')
-        // .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
 
     if (for_production) {
@@ -139,4 +162,5 @@ exports.publish   = gulp.series(cleanAssets, publishHtml,  publishFonts, publish
 exports.build     = gulp.series(cleanAssets, publishHtmlProduction,  publishFonts, publishImages, compileScssProduction);
 exports.build_dev = gulp.series(cleanAssets, publishHtmlDevelopment, publishFonts, publishImages, compileScssDevelopment);
 exports.watch     = gulp.series(cleanAssets, publishHtmlDevelopment, publishFonts, publishImages, compileScssDevelopment, serve, watchFiles);
-exports.default   = gulp.series(createStructure, cleanAssets, publishHtml, publishHtmlProduction, publishHtmlDevelopment, publishFonts, publishImages, compileScssProduction)
+exports.default   = gulp.series(createStructure, createDistStructure, cleanAssets, publishHtml, publishHtmlProduction, publishHtmlDevelopment, publishFonts, publishImages, compileScssProduction)
+exports.diststructure = createDistStructure;

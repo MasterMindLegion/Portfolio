@@ -1,3 +1,4 @@
+// Default button
 .btn--default {
     cursor: pointer;
     display: inline-block;
@@ -8,11 +9,13 @@
     outline: 0;
     padding: 0 3.75em;
     background-color: $primary;
+
     a {
       color: $terciary;
     }
 }
 
+// Header button
 .btn_header {
   border-radius: 0.6rem;
   width: 100%;
@@ -23,5 +26,4 @@
   padding: 0 1.5rem;
   border-radius: 0.6rem;
   color: white;
-  
 }

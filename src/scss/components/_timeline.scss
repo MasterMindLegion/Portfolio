@@ -1,7 +1,11 @@
+// Timeline Section
 .timeline {
-  background-color: $secondary;
   color: white;
-
+  background-color: white;
+  h1 {
+    color: black;
+    text-align: center;
+  }
   ul {
     padding: 50px 0;
 // Creation of line
@@ -10,7 +14,7 @@
       width: 6px;
       margin: 0 auto;
       padding-top: 50px;
-      background: white;
+      background-color: $secondary;
     }
   }
 }
