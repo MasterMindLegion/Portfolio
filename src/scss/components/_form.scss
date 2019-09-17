@@ -1,0 +1,21 @@
+// form
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  align-items: center;
+  padding: 3rem 0;
+
+  h1 {
+    padding-bottom: 3rem;
+
+  }
+  
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  
+}

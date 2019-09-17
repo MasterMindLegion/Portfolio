@@ -32,6 +32,7 @@
   </header>
   <!-- MAIN -->
   <main>
+
     <!-- Services Section -->
     <section id="Services" class="services">
       <div class="wrap--default">
@@ -75,6 +76,7 @@
         </div> 
       </div>
     </section>
+
     <!-- Skills Section -->
     <section id="Timeline" class="timeline">
       <h1>Used Technologies</h1>
@@ -128,6 +130,7 @@
       </li>
     </ul>
    </section>
+
    <!-- About Section -->
    <section id="About" class="about">
      <div class="wrap--default wrap-about">
@@ -137,11 +140,47 @@
          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit quis earum ratione laboriosam omnis labore atque debitis! Id vero illum temporibus harum a dolorum quasi quod ducimus! Omnis, sed ea.</p>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, distinctio.</p>
        </div>
-
      </div>
-
    </section>
-   
+
+   <!-- Contact Section -->
+   <section id="Contact" class="contact">
+     <h1>Contact Me</h1>
+     <form action="https://classes.codingbootcamp.cz/assets/classes/request-visualization/script.php" method="POST" class="form">
+      <!-- First & last name -->
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="name[firstName]" placeholder="First Name">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="name[lastName]" placeholder="Last Name">
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="Email" placeholder="Email" required>
+      <!-- Select service -->
+      <label for="service">Choose Servise</label>
+      <select name="Service" id="service">
+        <option value="1">Web Design</option>
+        <option value="2">Web Build</option>
+        <option value="3">Optimalization</option>
+        <option value="4">SEO</option>
+        <option value="5">Just saying Hello</option>
+      </select>
+      <!-- Checkbox -->
+      <div class="checkbox">
+        <span>Would like to receive a newsletter?</span>
+        <!-- check yes -->
+        <label for="newsletter_yes">Yes</label>
+        <input type="checkbox" name="newsletter[yes]" id="newsletter_yes">
+        <!-- check no -->
+        <label for="newsletter_yes">No</label>
+        <input type="checkbox" name="newsletter[no]" id="newsletter_no">
+      </div>
+      <!-- Textarea -->
+      <textarea name="Message" id="message" cols="30" rows="10" placeholder="Please write your message"></textarea>
+      <!-- Submit -->
+      <input type="submit" value="Submit" name="submit">
+    </form>
+   </section>
   </main>
   <script src="app.js"></script>
 </body>

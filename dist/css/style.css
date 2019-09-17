@@ -64,6 +64,20 @@ h1 {
   flex-direction: column;
   width: 100%; }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  align-items: center;
+  padding: 3rem 0; }
+  .contact h1 {
+    padding-bottom: 3rem; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+
 header {
   display: flex;
   justify-content: center;
