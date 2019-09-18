@@ -1,4 +1,4 @@
-// form
+// Section Contact
 .contact {
   display: flex;
   flex-direction: column;
@@ -8,14 +8,128 @@
 
   h1 {
     padding-bottom: 3rem;
-
   }
-  
 }
+// Form
 .form {
   display: flex;
   flex-direction: column;
   width: 80%;
+}
 
+// Inside of form
+.form-wrap {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  align-content: center;
+  position: relative;
   
+  padding: 2rem;
+  // Icon
+  i {
+    font-size: 2rem;
+    margin-right: 1.4rem;
+  }
+  // Input
+  input {
+    width: 100%;
+    
+  }
+  
+  .label-wrap {
+  position: absolute;
+  top: 27px!important;
+  left: 80px!important;
+  font-size: 1rem;
+  transition: transform .2s ease-out,color .2s ease-out;
+  transform-origin: 0 100%;
+  transform: translateY(12px);
+  cursor: text;
+  color: #757575;
+
+  &:active {
+    transform: translateY(-14px) scale(.8);
+  }    
+  }
+}
+
+//=======JS added classes
+//form-label
+.label-active {
+  position: absolute;
+  // transform: translate(Opx, 30px) scale(.8);
+  top: 0;
+  left: 30px;
+  font-size: 1rem;
+
+  transition: transform .2s ease-out,color .2s ease-out;
+  transform-origin: 0 100%;
+  
+  cursor: text;
+  color: #757575;
+ 
+
+}
+
+
+//newsletter-wrap
+.form-wrap-check{
+  width: 100%;
+  flex-wrap: wrap;
+
+  input {
+    width: 100%;
+  }
+
+  .span-wrap {
+    display: flex;
+    width: 100%;
+    
+   i {
+    align-self: flex-end;
+   }
+  }
+
+  .newsletter-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    .newsletter-yes, .newsletter-no {
+      display: flex;
+      align-items:flex-end;
+      padding: 1.4rem 0 0 0;
+      width: 25%;
+    }
+  }
+}
+
+// Message
+.form-wrap-textarea {
+// Should be used empty just for nesting?
+
+  textarea {
+    width: 100%;
+  }
+
+  .message-form {
+    position: absolute;
+    top: 20px !important;
+    left: 80px !important;
+    font-size: 1rem;
+    transition: transform .2s ease-out,color .2s ease-out;
+    transform-origin: 0 100%;
+    transform: translateY(12px);
+    cursor: text;
+    color: #757575;
+  }
+}
+// Submit Button
+form input[type="submit"] {
+  @extend .btn--default;
+  align-self: center;
+  width: 60%;
+  margin-top: 2rem;
+  color: white;
 }

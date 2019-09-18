@@ -28,3 +28,20 @@ img {
 h1 {
   font-size: 1.9rem;
 }
+
+//Forms
+
+input, textarea {
+   background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+    &:focus {
+      border-bottom: 1px solid #4285f4;
+      box-shadow: 0 1px 0 0 #4285f4;
+    }
+}

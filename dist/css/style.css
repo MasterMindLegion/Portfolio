@@ -21,7 +21,19 @@ img {
 h1 {
   font-size: 1.9rem; }
 
-.btn--default {
+input, textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+  input:focus, textarea:focus {
+    border-bottom: 1px solid #4285f4;
+    box-shadow: 0 1px 0 0 #4285f4; }
+
+.btn--default, form input[type="submit"] {
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
@@ -31,7 +43,7 @@ h1 {
   outline: 0;
   padding: 0 3.75em;
   background-color: #8a0089; }
-  .btn--default a {
+  .btn--default a, form input[type="submit"] a {
     color: #fff; }
 
 .btn_header {
@@ -77,6 +89,81 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 80%; }
+
+.form-wrap {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  align-content: center;
+  position: relative;
+  padding: 2rem; }
+  .form-wrap i {
+    font-size: 2rem;
+    margin-right: 1.4rem; }
+  .form-wrap input {
+    width: 100%; }
+  .form-wrap .label-wrap {
+    position: absolute;
+    top: 27px !important;
+    left: 80px !important;
+    font-size: 1rem;
+    transition: transform .2s ease-out,color .2s ease-out;
+    transform-origin: 0 100%;
+    transform: translateY(12px);
+    cursor: text;
+    color: #757575; }
+    .form-wrap .label-wrap:active {
+      transform: translateY(-14px) scale(0.8); }
+
+.label-active {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-size: 1rem;
+  transition: transform .2s ease-out,color .2s ease-out;
+  transform-origin: 0 100%;
+  cursor: text;
+  color: #757575; }
+
+.form-wrap-check {
+  width: 100%;
+  flex-wrap: wrap; }
+  .form-wrap-check input {
+    width: 100%; }
+  .form-wrap-check .span-wrap {
+    display: flex;
+    width: 100%; }
+    .form-wrap-check .span-wrap i {
+      align-self: flex-end; }
+  .form-wrap-check .newsletter-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    .form-wrap-check .newsletter-wrap .newsletter-yes, .form-wrap-check .newsletter-wrap .newsletter-no {
+      display: flex;
+      align-items: flex-end;
+      padding: 1.4rem 0 0 0;
+      width: 25%; }
+
+.form-wrap-textarea textarea {
+  width: 100%; }
+
+.form-wrap-textarea .message-form {
+  position: absolute;
+  top: 20px !important;
+  left: 80px !important;
+  font-size: 1rem;
+  transition: transform .2s ease-out,color .2s ease-out;
+  transform-origin: 0 100%;
+  transform: translateY(12px);
+  cursor: text;
+  color: #757575; }
+
+form input[type="submit"] {
+  align-self: center;
+  width: 60%;
+  margin-top: 2rem;
+  color: white; }
 
 header {
   display: flex;

@@ -157,10 +157,10 @@ function reload(done) {
 }
  
 // export tasks
-exports.structure = createStructure;
-exports.publish   = gulp.series(cleanAssets, publishHtml,  publishFonts, publishImages);
-exports.build     = gulp.series(cleanAssets, publishHtmlProduction,  publishFonts, publishImages, compileScssProduction);
-exports.build_dev = gulp.series(cleanAssets, publishHtmlDevelopment, publishFonts, publishImages, compileScssDevelopment);
-exports.watch     = gulp.series(cleanAssets, publishHtmlDevelopment, publishFonts, publishImages, compileScssDevelopment, serve, watchFiles);
-exports.default   = gulp.series(createStructure, createDistStructure, cleanAssets, publishHtml, publishHtmlProduction, publishHtmlDevelopment, publishFonts, publishImages, compileScssProduction)
+exports.structure     = createStructure;
+exports.publish       = gulp.series(cleanAssets, publishHtml,  publishFonts, publishImages);
+exports.build         = gulp.series(cleanAssets, publishHtmlProduction,  publishFonts, publishImages, compileScssProduction);
+exports.build_dev     = gulp.series(cleanAssets, publishHtmlDevelopment, publishFonts, publishImages, compileScssDevelopment);
+exports.watch         = gulp.series(cleanAssets, publishHtmlDevelopment, publishFonts, publishImages, compileScssDevelopment, serve, watchFiles);
+exports.default       = gulp.series(createStructure, createDistStructure, cleanAssets, publishHtml, publishHtmlProduction, publishHtmlDevelopment, publishFonts, publishImages, compileScssProduction)
 exports.diststructure = createDistStructure;

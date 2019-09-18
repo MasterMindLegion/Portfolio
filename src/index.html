@@ -148,35 +148,61 @@
      <h1>Contact Me</h1>
      <form action="https://classes.codingbootcamp.cz/assets/classes/request-visualization/script.php" method="POST" class="form">
       <!-- First & last name -->
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" name="name[firstName]" placeholder="First Name">
+      <div class="form-wrap">
+        <i class="fas fa-user"></i>
+        <label for="firstName" class="label-wrap" id="nameLabel">Your Name</label>
+        <input type="text" class="input-wrap" id="name" name="name[firstName]">
+      </div>
 
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" name="name[lastName]" placeholder="Last Name">
       <!-- Email -->
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="Email" placeholder="Email" required>
+      <div class="form-wrap">
+        <i class="fas fa-envelope"></i>
+        <label for="email" class="label-wrap" id="emailLabel">Your Email</label>
+        <input type="email" class="input-wrap" id="email" name="Email" required>
+      </div>
+
       <!-- Select service -->
-      <label for="service">Choose Servise</label>
-      <select name="Service" id="service">
-        <option value="1">Web Design</option>
-        <option value="2">Web Build</option>
-        <option value="3">Optimalization</option>
-        <option value="4">SEO</option>
-        <option value="5">Just saying Hello</option>
-      </select>
+      <div class="form-wrap">
+        <label for="service"><i class="fas fa-tasks"></i></label>
+        <select name="Service" id="service">
+          <option value="1">Web Design</option>
+          <option value="2">Web Build</option>
+          <option value="3">Optimalization</option>
+          <option value="4">SEO</option>
+          <option value="5">Just saying Hello</option>
+        </select>
+      </div>
+  
       <!-- Checkbox -->
-      <div class="checkbox">
-        <span>Would like to receive a newsletter?</span>
-        <!-- check yes -->
-        <label for="newsletter_yes">Yes</label>
-        <input type="checkbox" name="newsletter[yes]" id="newsletter_yes">
+      <div class="form-wrap form-wrap-check">
+        <span class="span-wrap">
+          <i class="fas fa-tag prefix"></i>Would like to receive a newsletter?
+        </span>
+
+        <!-- newsletter-wrap -->
+        <div class="newsletter-wrap">
+           <!-- check yes -->
+        <div class="newsletter-yes">
+          <label for="newsletter_yes">Yes</label>
+          <input type="checkbox" name="newsletter[yes]" id="newsletter_yes">
+        </div>
+        
         <!-- check no -->
-        <label for="newsletter_yes">No</label>
-        <input type="checkbox" name="newsletter[no]" id="newsletter_no">
+        <div class="newsletter-no">
+          <label for="newsletter_yes">No</label>
+          <input type="checkbox" name="newsletter[no]" id="newsletter_no">
+        </div>
+        </div>
+       
+      
       </div>
       <!-- Textarea -->
-      <textarea name="Message" id="message" cols="30" rows="10" placeholder="Please write your message"></textarea>
+      <div class="form-wrap form-wrap-textarea">
+        <i class="fas fa-pencil-alt"></i>
+        <label for="message" class="message-form">Message</label>
+        <textarea name="Message" id="message" cols="30" rows="5" ></textarea>
+      </div>
+     
       <!-- Submit -->
       <input type="submit" value="Submit" name="submit">
     </form>
