@@ -5,6 +5,7 @@
   flex-basis: 100%;
   align-items: center;
   padding: 3rem 0;
+  background-color: #f8f9fa;
 
   h1 {
     padding-bottom: 3rem;
@@ -30,17 +31,20 @@
   i {
     font-size: 2rem;
     margin-right: 1.4rem;
+    color: $secondary;
   }
   // Input
   input {
     width: 100%;
+    padding: 1rem;
+    background-color: white;
     
   }
   
   .label-wrap {
   position: absolute;
-  top: 27px!important;
-  left: 80px!important;
+  left: 83px!important;
+  bottom: 27px!important;
   font-size: 1rem;
   transition: transform .2s ease-out,color .2s ease-out;
   transform-origin: 0 100%;
@@ -62,14 +66,14 @@
   top: 0;
   left: 30px;
   font-size: 1rem;
-
   transition: transform .2s ease-out,color .2s ease-out;
   transform-origin: 0 100%;
-  
   cursor: text;
   color: #757575;
- 
+}
 
+.test {
+  background-color: black;
 }
 
 
@@ -111,12 +115,13 @@
 
   textarea {
     width: 100%;
+    background-color: white;
   }
 
   .message-form {
     position: absolute;
     top: 20px !important;
-    left: 80px !important;
+    left: 85px !important;
     font-size: 1rem;
     transition: transform .2s ease-out,color .2s ease-out;
     transform-origin: 0 100%;

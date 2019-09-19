@@ -81,7 +81,8 @@ input, textarea {
   flex-direction: column;
   flex-basis: 100%;
   align-items: center;
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  background-color: #f8f9fa; }
   .contact h1 {
     padding-bottom: 3rem; }
 
@@ -99,13 +100,16 @@ input, textarea {
   padding: 2rem; }
   .form-wrap i {
     font-size: 2rem;
-    margin-right: 1.4rem; }
+    margin-right: 1.4rem;
+    color: #337ab7; }
   .form-wrap input {
-    width: 100%; }
+    width: 100%;
+    padding: 1rem;
+    background-color: white; }
   .form-wrap .label-wrap {
     position: absolute;
-    top: 27px !important;
-    left: 80px !important;
+    left: 83px !important;
+    bottom: 27px !important;
     font-size: 1rem;
     transition: transform .2s ease-out,color .2s ease-out;
     transform-origin: 0 100%;
@@ -124,6 +128,9 @@ input, textarea {
   transform-origin: 0 100%;
   cursor: text;
   color: #757575; }
+
+.test {
+  background-color: black; }
 
 .form-wrap-check {
   width: 100%;
@@ -146,12 +153,13 @@ input, textarea {
       width: 25%; }
 
 .form-wrap-textarea textarea {
-  width: 100%; }
+  width: 100%;
+  background-color: white; }
 
 .form-wrap-textarea .message-form {
   position: absolute;
   top: 20px !important;
-  left: 80px !important;
+  left: 85px !important;
   font-size: 1rem;
   transition: transform .2s ease-out,color .2s ease-out;
   transform-origin: 0 100%;
